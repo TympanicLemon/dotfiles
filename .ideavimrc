@@ -1,0 +1,30 @@
+let mapleader = " "
+let maplocalleader = " "
+
+"------------------ Options
+set nu
+set rnu
+set ideajoin
+set clipboard="unnamedplus"
+
+"------------------ Keymaps
+imap jk <ESC>
+
+nmap <S-h> <Action>(PreviousTab)
+nmap <S-l> <Action>(NextTab)
+
+nmap <esc> :noh<CR><esc>
+
+vmap < <gv
+vmap > >gv
+
+"------------------
+map <leader>la <Action>(ShowIntentionActions)
+map <leader>lo <Action>(OptimizeImports)
+map <leader>lr <Action>(RenameElement)
+
+map <leader>gd <Action>(GotoDeclaration)
+map <leader>gi <Action>(GoToImplementation)
+
+map <leader>lr <Action>(GotoDeclaration)
+map <leader>lr <Action>(GotoDeclaration)
