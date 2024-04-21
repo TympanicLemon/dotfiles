@@ -51,6 +51,8 @@ end
 # Fish
 set -g fish_greeting ""
 
+zoxide init fish | source
+
 # Starship
 set -gx STARSHIP_CONFIG ~/dotfiles/starship.toml
 starship init fish | source
