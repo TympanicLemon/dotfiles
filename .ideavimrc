@@ -1,10 +1,8 @@
 let mapleader = " "
-let maplocalleader = " "
 
 "------------------ Options
 set nu
 set rnu
-set ideajoin
 set clipboard="unnamedplus"
 
 "------------------ Keymaps
