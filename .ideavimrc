@@ -4,6 +4,7 @@ let mapleader = " "
 set nu
 set rnu
 set clipboard="unnamedplus"
+set clipboard^=ideaput
 
 "------------------ Keymaps
 imap jk <ESC>
