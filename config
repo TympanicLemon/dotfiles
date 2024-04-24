@@ -1,5 +1,5 @@
 # Command to send at the beggining of opening shell
-# command = "/bin/zsh -c 'tmux attach || tmux'"
+# command = "/opt/homebrew/bin/fish -c 'tmux attach || tmux'"
 
 # Font options
 font-family = "JetBrainsMono Nerd Font"

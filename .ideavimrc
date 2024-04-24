@@ -4,7 +4,6 @@ let mapleader = " "
 set nu
 set rnu
 set clipboard="unnamedplus"
-set clipboard^=ideaput
 
 "------------------ Keymaps
 imap jk <ESC>
@@ -18,8 +17,8 @@ vmap < <gv
 vmap > >gv
 
 "------------------
+map <leader>o <Action>(OptimizeImports)
 map <leader>la <Action>(ShowIntentionActions)
-map <leader>lo <Action>(OptimizeImports)
 map <leader>lr <Action>(RenameElement)
 
 map <leader>gd <Action>(GotoDeclaration)
