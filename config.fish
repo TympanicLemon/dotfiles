@@ -21,31 +21,10 @@ alias asmb='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 22
 alias jackc='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/JackCompiler.sh'
 alias vme='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/VMEmulator.sh'
 
-# Functions
 function dot
     cd ~/dotfiles
     set file (find . -type f ! -path "*/.git/*" | fzf --height 40% --border)
     [ -n "$file" ]; and nvim "$file"
-end
-
-function sp
-    cd ~/Projects
-    set category (find . -mindepth 1 -maxdepth 1 -type d ! -path "*/.*" | sed "s|^\./||" | fzf --height 40% --border)
-    [ -n "$category" ]; and cd "$category"
-    set project (find . -mindepth 1 -maxdepth 1 -type d ! -path "*/.*" | sed "s|^\./||" | fzf --height 40% --border)
-    [ -n "$project" ]; and cd "$project"
-end
-
-function s210
-    cd "/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS 210"
-    set dir (find . -type d ! -path "*/.git/*" | fzf --height 40% --border)
-    [ -n "$dir" ]; and cd "$dir" && nvim
-end
-
-function s220
-    cd "/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS 220"
-    set dir (find . -type d ! -path "*/.git/*" | fzf --height 40% --border)
-    [ -n "$dir" ]; and cd "$dir" && nvim
 end
 
 # Fish
