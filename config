@@ -1,28 +1,10 @@
 # Command to send at the beggining of opening shell
 # command = "/opt/homebrew/bin/fish -c 'tmux attach || tmux'"
 
-# Font options
-font-family = "JetBrainsMono Nerd Font"
-font-thicken = true
 font-size = 16
+font-thicken = true
+font-family = "JetBrainsMono Nerd Font"
 
-# Clipboard options
-clipboard-read = allow
-clipboard-write = allow
-
-# Padding options
 window-padding-x = 0
 window-padding-y = 0
-
-# Misc options
-confirm-close-surface = false
 window-save-state = always
-macos-option-as-alt = true
-
-# Keybindings - uncomment once i figure out how to integrate neovim with these keybindings
-# keybind = ctrl+h=goto_split:left
-# keybind = ctrl+l=goto_split:right
-# keybind = ctrl+k=goto_split:top
-# keybind = ctrl+j=goto_split:bottom
-
-keybind = ctrl+shift+r=reload_config
