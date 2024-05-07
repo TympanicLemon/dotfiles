@@ -1,9 +1,6 @@
-# Command to send at the beggining of opening shell
-# command = "/opt/homebrew/bin/fish -c 'tmux attach || tmux'"
-
+font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 font-thicken = true
-font-family = "JetBrainsMono Nerd Font"
 
 window-padding-x = 0
 window-padding-y = 0
