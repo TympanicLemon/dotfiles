@@ -1,6 +1,5 @@
 # Set PATH
 set -gx PATH /opt/homebrew/bin $PATH
-set -U fish_user_paths ~/.local/share/bob/nvim-bin $fish_user_paths
 
 # Set editor for local and remote sessions
 if set -q SSH_CONNECTION
