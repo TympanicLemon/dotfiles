@@ -3,12 +3,11 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Set editor for local and remote sessions
 if [[ -n "$SSH_CONNECTION" ]]; then
-    export EDITOR=vim
+    export EDITOR=vi
 else
     export EDITOR=nvim
 fi
@@ -69,13 +68,6 @@ alias conf='cd ~/.config/nvim && nvim'
 alias ls='eza'
 alias vim='nvim'
 alias c='clear'
-
-# School
-alias hws='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/HardwareSimulator.sh'
-alias cpu='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/CPUEmulator.sh'
-alias asmb='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/Assembler.sh'
-alias jackc='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/JackCompiler.sh'
-alias vme='/Users/danielz/Library/CloudStorage/OneDrive-MiraCostaCollege/CS\ 220/nand2tetris/tools/VMEmulator.sh'
 
 # Function
 dot() {
