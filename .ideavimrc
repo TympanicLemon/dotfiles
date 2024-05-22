@@ -3,7 +3,7 @@ let mapleader = " "
 "------------------ Options
 set nu
 set rnu
-set clipboard="unnamedplus"
+set clipboard=unnamedplus
 
 "------------------ Keymaps
 imap jk <ESC>

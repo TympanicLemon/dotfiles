@@ -31,7 +31,6 @@ zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
-
 # Load completions
 autoload -Uz compinit && compinit
 
@@ -65,7 +64,6 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 alias ls='eza'
 alias gg='lazygit'
 alias conf='cd ~/.config/nvim && nvim'
-alias ls='eza'
 alias vim='nvim'
 alias c='clear'
 
