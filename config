@@ -1,6 +1,7 @@
 font-family = "JetBrainsMono Nerd Font"
 font-size = 16
 font-thicken = true
+font-style-italic = false
 
 window-padding-x = 0
 window-padding-y = 0
