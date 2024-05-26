@@ -66,6 +66,7 @@ alias gg='lazygit'
 alias conf='cd ~/.config/nvim && nvim'
 alias vim='nvim'
 alias c='clear'
+alias start-bs='browser-sync start --config bs-config.js'
 
 # Function
 dot() {
