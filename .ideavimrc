@@ -16,13 +16,11 @@ nmap <esc> :noh<CR><esc>
 vmap < <gv
 vmap > >gv
 
-"------------------
+"------------------ IDE Keymaps
 map <leader>o <Action>(OptimizeImports)
 map <leader>la <Action>(ShowIntentionActions)
+map <leader>lf <Action>(ReformatCode)
 map <leader>lr <Action>(RenameElement)
 
 map <leader>gd <Action>(GotoDeclaration)
 map <leader>gi <Action>(GoToImplementation)
-
-map <leader>lr <Action>(GotoDeclaration)
-map <leader>lr <Action>(GotoDeclaration)
