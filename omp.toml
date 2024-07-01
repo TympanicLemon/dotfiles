@@ -1,0 +1,78 @@
+schema = "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json"
+version = 2
+final_space = true
+console_title_template = "{{if .Root}}[root] {{end}} in <{{.Folder}}>"
+
+[palette]
+white = "#f7f7f7"
+black = "#111111"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+background = "transparent"
+foreground = "p:white"
+style = "plain"
+template = "┌"
+type = "text"
+
+[[blocks.segments]]
+background = "#464646"
+foreground = "p:white"
+style = "plain"
+template = " {{.Icon}}{{if .WSL}} (WSL){{end}}⠀"
+type = "os"
+[blocks.segments.properties]
+windows = ""
+linux = ""
+ubuntu = ""
+macos = ""
+
+[[blocks.segments]]
+background = "#ffffd6"
+foreground = "p:black"
+style = "plain"
+template = "{{.HEAD}}⠀"
+type = "git"
+[blocks.segments.properties]
+branch_icon = "  "
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+background = "transparent"
+foreground = "p:white"
+style = "plain"
+template = "<p:white>└</><#93d0ff>[</> {{.Path}} <#93d0ff>]</>"
+type = "path"
+[blocks.segments.properties]
+folder_icon = ""
+folder_separator_template = "<#93d0ff> » </>"
+home_icon = ""
+style = "agnoster"
+
+[[blocks]]
+type = "prompt"
+alignment = "left"
+newline = true
+
+[[blocks.segments]]
+background = "transparent"
+foreground = "#81ff91"
+style = "plain"
+template = "❯"
+type = "status"
+[blocks.segments.properties]
+always_enabled = true
+foreground_templates = ["{{if gt .Code 0}}#ff3030{{end}}"]
+
+[transient_prompt]
+background = "transparent"
+foreground = "#81ff91"     # This should match the green color in your prompt
+template = "❯ "

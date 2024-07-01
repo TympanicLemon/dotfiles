@@ -1,8 +1,3 @@
-# Enable transient prompt
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 export PATH="/opt/homebrew/bin:$PATH"
 
 # Set editor for local and remote sessions
@@ -24,8 +19,7 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
+# Plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
@@ -75,8 +69,11 @@ dot() {
     [[ -n "$file" ]] && nvim "$file"
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Load oh-my-posh 
+eval "$(oh-my-posh init zsh --config $HOME/dotfiles/omp.toml)"
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh)"
+fi
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
