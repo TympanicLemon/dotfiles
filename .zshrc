@@ -1,3 +1,6 @@
+# Enable nvim through bob-nvim
+export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
+
 # Enable transient prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
