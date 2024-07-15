@@ -1,6 +1,3 @@
-# Enable nvim through bob-nvim
-export PATH="$HOME/.local/share/bob/nvim-bin:$PATH"
-
 # Enable transient prompt
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
@@ -63,15 +60,14 @@ zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-# Aliases
+### Aliases
 alias ls='eza'
 alias gg='lazygit'
 alias conf='cd ~/.config/nvim && nvim'
 alias vim='nvim'
 alias c='clear'
-alias start-bs='browser-sync start --config bs-config.js'
 
-# Function
+### Functions
 dot() {
     cd ~/dotfiles
     file=$(find . -type f ! -path "*/.git/*" | fzf --height 40% --border)
@@ -83,4 +79,3 @@ dot() {
 
 eval "$(fzf --zsh)"
 eval "$(zoxide init zsh)"
-
