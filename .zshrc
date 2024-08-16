@@ -5,11 +5,13 @@ fi
 
 export PATH="/opt/homebrew/bin:$PATH"
 
+export GIT_EDITOR='nvim'
+
 # Set editor for local and remote sessions
 if [[ -n "$SSH_CONNECTION" ]]; then
-    export EDITOR=vi
+    export EDITOR='zed'
 else
-    export EDITOR=nvim
+    export EDITOR='zed'
 fi
 
 # Set the directory we want to store zinit and plugins
