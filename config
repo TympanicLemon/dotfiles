@@ -8,3 +8,5 @@ window-padding-y = 0
 window-save-state = always
 
 confirm-close-surface = false
+
+macos-option-as-alt = true
