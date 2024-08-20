@@ -9,9 +9,9 @@ export GIT_EDITOR='nvim'
 
 # Set editor for local and remote sessions
 if [[ -n "$SSH_CONNECTION" ]]; then
-    export EDITOR='zed'
+    export EDITOR='nvim'
 else
-    export EDITOR='zed'
+    export EDITOR='nvim'
 fi
 
 # Set the directory we want to store zinit and plugins
