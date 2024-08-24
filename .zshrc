@@ -68,6 +68,7 @@ alias gg='lazygit'
 alias conf='cd ~/.config/nvim && nvim'
 alias vim='nvim'
 alias c='clear'
+alias py='python3'
 
 ### Functions
 dot() {
