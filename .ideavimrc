@@ -1,34 +1,34 @@
+"------------------ Leader Key
 let mapleader = " "
 
 "------------------ Options
-set nu
-set rnu
-set clipboard=unnamedplus
+set number
+set relativenumber
+set clipboard+=unnamedplus,ideaput
+set ideajoin
 
-"------------------ Keymaps
+"------------------ General Keymaps
 imap jk <ESC>
-
 nmap <S-h> <Action>(PreviousTab)
 nmap <S-l> <Action>(NextTab)
-
 nmap <esc> :noh<CR><esc>
-
 vmap < <gv
 vmap > >gv
 
-"------------------ IDE Keymaps
+"------------------ IDE Actions
+" Code editing and navigation
 map <leader>la <Action>(ShowIntentionActions)
 map <leader>lr <Action>(RenameElement)
 map <leader>lf <Action>(ReformatCode)
 map <leader>o <Action>(OptimizeImports)
-
 map <leader>gd <Action>(GotoDeclaration)
 map <leader>gi <Action>(GoToImplementation)
+map <leader>tr <Action>(Run)
 
-map <leader>ff <Action>(GotoFile)
+" File navigation
+map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
+"map <leader>ff <Action>(GotoFile)
 map <leader><leader> <Action>(GotoFile)
 
+" Tool windows
 map <leader>tt <Action>(ActivateTerminalToolWindow)
-
-"------------------ IDE
-set ideajoin
