@@ -72,6 +72,7 @@ alias py='python3'
 
 # git aliases
 alias gs='git status'
+alias gd='git diff'
 alias gc='git commit -m'
 alias gca='git commit -a -m'
 alias gp='git push'
