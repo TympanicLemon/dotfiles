@@ -1,34 +1,37 @@
-"------------------ Leader Key
+"------------------ General Settings -------------
 let mapleader = " "
 
-"------------------ Options
 set number
 set relativenumber
 set clipboard+=unnamedplus,ideaput
 set ideajoin
 
-"------------------ General Keymaps
+"------------------ Keymaps and Actions ----------
+" Basic Editor Actions
 imap jk <ESC>
-nmap <S-h> <Action>(PreviousTab)
-nmap <S-l> <Action>(NextTab)
-nmap <esc> :noh<CR><esc>
 vmap < <gv
 vmap > >gv
 
-"------------------ IDE Actions
-" Code editing and navigation
-map <leader>la <Action>(ShowIntentionActions)
-map <leader>lr <Action>(RenameElement)
-map <leader>lf <Action>(ReformatCode)
-map <leader>o <Action>(OptimizeImports)
-map <leader>gd <Action>(GotoDeclaration)
-map <leader>gi <Action>(GoToImplementation)
-map <leader>tr <Action>(Run)
-
-" File navigation
-map <Leader>ff <action>(com.mituuz.fuzzier.Fuzzier)
-"map <leader>ff <Action>(GotoFile)
+" Navigation
+map <S-h> <Action>(PreviousTab)
+map <S-l> <Action>(NextTab)
 map <leader><leader> <Action>(GotoFile)
+map <leader>ff <Action>(GotoFile)
 
-" Tool windows
+" Git
+map <leader>gd <Action>(Compare.SameVersion)
+map <leader>gr <Action>(Vcs.RollbackChangedLines)
+
+" Go To Actions
+map gd <Action>(GotoDeclaration)
+
+" Code Editing and Refactoring
+map <leader>la <Action>(ShowIntentionActions)
+map <leader>lf <Action>(ReformatCode)
+map <leader>lo <Action>(OptimizeImports)
+map <leader>lr <Action>(RenameElement)
+
+" Tool Windows
+map <leader>xx <Action>(ActivateProblemsViewToolWindow)
 map <leader>tt <Action>(ActivateTerminalToolWindow)
+map <leader>tr <Action>(Run)
