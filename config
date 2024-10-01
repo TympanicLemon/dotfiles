@@ -10,6 +10,3 @@ window-save-state = always
 confirm-close-surface = false
 
 macos-option-as-alt = true
-
-background = "#282828"
-
