@@ -32,6 +32,7 @@ map <leader>lo <Action>(OptimizeImports)
 map <leader>lr <Action>(RenameElement)
 
 " Tool Windows
+map <leader>ac <Action>(ActivateAIAssistantToolWindow)
 map <leader>xx <Action>(ActivateProblemsViewToolWindow)
 map <leader>tt <Action>(ActivateTerminalToolWindow)
 map <leader>tr <Action>(Run)
