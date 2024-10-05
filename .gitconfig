@@ -1,0 +1,3 @@
+[core]
+    excludesfile = ~/dotfiles/.gitignore_global
+
