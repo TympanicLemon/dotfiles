@@ -3,15 +3,16 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@21"
+if [ -f ~/.openai_key ]; then
+  source ~/.openai_key
+fi
 
+export PATH="/opt/homebrew/bin:$PATH"
 export GIT_EDITOR='nvim'
 
 # Set editor for local and remote sessions
 if [[ -n "$SSH_CONNECTION" ]]; then
-    export EDITOR='nvim'
+    export EDITOR='vi'
 else
     export EDITOR='nvim'
 fi
