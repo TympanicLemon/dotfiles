@@ -3,10 +3,10 @@ let mapleader = " "
 
 set number
 set relativenumber
-set clipboard+=unnamedplus,ideaput
+set clipboard=ideaput,unnamedplus
 set ideajoin
 
-"------------------ Keymaps and Actions ----------
+"------------------ Keymaps ----------------------
 " Basic Editor Actions
 imap jk <ESC>
 vmap < <gv
@@ -16,7 +16,6 @@ vmap > >gv
 map <S-h> <Action>(PreviousTab)
 map <S-l> <Action>(NextTab)
 map <leader><leader> <Action>(GotoFile)
-map <leader>ff <Action>(GotoFile)
 
 " Git
 map <leader>gd <Action>(Compare.SameVersion)
@@ -35,4 +34,3 @@ map <leader>lr <Action>(RenameElement)
 map <leader>ac <Action>(ActivateAIAssistantToolWindow)
 map <leader>xx <Action>(ActivateProblemsViewToolWindow)
 map <leader>tt <Action>(ActivateTerminalToolWindow)
-map <leader>tr <Action>(Run)
