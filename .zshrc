@@ -3,10 +3,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-if [ -f ~/.openai_key ]; then
-  source ~/.openai_key
-fi
-
 export PATH="/opt/homebrew/bin:$PATH"
 export GIT_EDITOR='nvim'
 
