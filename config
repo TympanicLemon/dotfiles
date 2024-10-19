@@ -1,12 +1,12 @@
+auto-update = download
+confirm-close-surface = false
+macos-option-as-alt = true
+
 font-family = "JetBrainsMono Nerd Font"
 font-size = 16
-font-thicken = true
 font-style-italic = false
+font-thicken = true
 
 window-padding-x = 0
 window-padding-y = 0
 window-save-state = always
-
-macos-option-as-alt = true
-confirm-close-surface = false
-auto-update = download

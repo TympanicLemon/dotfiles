@@ -3,17 +3,17 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Path & Envioirment variables
+# Path & Enviorment variables
 export PATH="/opt/homebrew/bin:$PATH"
-export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
-export JAVA_HOME="/opt/homebrew/opt/openjdk@17"
+export EDITOR="zed"
 
-# Set editor for local and remote sessions
-if [[ -n "$SSH_CONNECTION" ]]; then
-    export EDITOR='vi'
-else
-    export EDITOR='nvim'
-fi
+# Aliases
+alias ls='eza'
+alias gg='lazygit'
+alias gs='git status'
+alias gc='git commit -m'
+alias gca='git commit -a -m'
+alias gp='git push'
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -62,28 +62,6 @@ zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu no
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
-
-### Aliases
-alias ls='eza'
-alias gg='lazygit'
-alias conf='cd ~/.config/nvim && nvim'
-alias vim='nvim'
-alias c='clear'
-alias py='python3'
-
-# git aliases
-alias gs='git status'
-alias gd='git diff'
-alias gc='git commit -m'
-alias gca='git commit -a -m'
-alias gp='git push'
-
-### Functions
-dot() {
-    cd ~/dotfiles
-    file=$(find . -type f ! -path "*/.git/*" | fzf --height 40% --border)
-    [[ -n "$file" ]] && nvim "$file"
-}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
