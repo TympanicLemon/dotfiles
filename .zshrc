@@ -8,6 +8,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR="zed"
 
 # Aliases
+alias c="clear"
 alias ls='eza'
 alias gg='lazygit'
 alias gs='git status'
