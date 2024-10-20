@@ -5,7 +5,8 @@ fi
 
 # Path & Enviorment variables
 export PATH="/opt/homebrew/bin:$PATH"
-export EDITOR="zed"
+export PATH="/opt/homebrew/opt/git/bin:$PATH"
+export EDITOR="vi"
 
 # Aliases
 alias c="clear"
