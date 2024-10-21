@@ -12,10 +12,12 @@ export EDITOR="vi"
 alias c="clear"
 alias ls='eza'
 alias gg='lazygit'
-alias gs='git status'
+alias ga='git add'
 alias gc='git commit -m'
-alias gca='git commit -a -m'
 alias gp='git push'
+alias gs='git status'
+alias gaa='git add .'
+alias gca='git commit -a -m'
 
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
